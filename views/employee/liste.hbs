@@ -5,7 +5,8 @@
     <thead>
         <tr>
             <th>Task</th>
-            <th>Title</th>
+            <th>Title</th>  
+            <th>Date</th>
             <th>Created At</th>
         </tr>
     </thead>
@@ -14,10 +15,11 @@
         <tr>
             <td>{{this.task}}</td>
             <td>{{this.title}}</td>
+            <td>{{this.date}}</td>
             <td>{{this.created_at}}</td>
             <td>
-                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
-                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                <a href="/schedule/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/schedule/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
             </td>
         </tr>
         {{/each}}

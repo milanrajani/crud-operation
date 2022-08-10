@@ -1,0 +1,27 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/schedule" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{schedule._id}}">
+    
+    <div class="form-row">
+         
+        <div class="form-group col-md-6"> 
+            <label>title</label>
+                <input type="text" class="form-control" name="task" placeholder="task" value="{{schedule.task}}">
+         </div> 
+        <div class="form-group col-md-6">
+            <label>task</label>
+                <input type="text" class="form-control" name="title" placeholder="title" value="{{schedule.title}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>date</label>
+                <input type="date" class="form-control" name="date"   placeholder="date" value="{{schedule.date}}">
+        </div>
+         
+
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/schedule/liste"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

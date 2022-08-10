@@ -1,6 +1,7 @@
 require('./models/db');
 
 const employeeController = require('./controllers/employeeController')
+const scheduleController = require('./controllers/scheduleController')
 const path = require('path')
 const exphbs = require('express-handlebars')
 const bodyparser = require('body-parser')
@@ -24,8 +25,9 @@ app.set('view engine', 'hbs');
  
  
 
-app.listen(3000, () => {
+app.listen(8000, () => {
     console.log('App is running');
 });
 
 app.use('/employee',employeeController) 
+app.use('/schedule',scheduleController) 
